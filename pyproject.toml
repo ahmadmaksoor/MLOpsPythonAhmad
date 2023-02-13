@@ -1,0 +1,4 @@
+[tool.black]
+
+max-complexity = 10
+line-length = 122
