@@ -1,9 +1,9 @@
 name: Python Continuous Integration
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "step_1" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "step_1" ]
 permissions:
   contents: read
 jobs:
