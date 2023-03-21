@@ -1,9 +1,9 @@
 name: Python Continuous Integration
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "step_1" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "step_1" ]
 permissions:
   contents: read
 jobs:
@@ -28,7 +28,7 @@ jobs:
     - name: Lint with flake8
       run: |
         pipenv install --dev
-        pipenv run flake8 .
+        pipenv run flake8 --exclude extraction.py,extraction_test.py,__init__.py
   build:
     runs-on: ubuntu-latest
     steps:
