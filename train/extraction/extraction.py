@@ -1,7 +1,8 @@
 from io import BytesIO
 from pathlib import Path
 import fitz
-from fitz import Document, Pixmap
+from fitz import Pixmap
+
 
 def convert_pixmap_to_rgb(pixmap) -> Pixmap:
     """Convert to rgb in order to write on png"""
@@ -10,6 +11,7 @@ def convert_pixmap_to_rgb(pixmap) -> Pixmap:
         return pixmap
     else:
         return fitz.Pixmap(fitz.csRGB, pixmap)
+
 
 pdfs_directory_path = ".\dataset-cats-dogs-others"
 images_directory_path = ".\extracted_images"
